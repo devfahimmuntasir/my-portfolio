@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  background: black;
+}
+
+/* Utility Classes */
+.nav {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.text-primary {
+  color: #A93226 ;
+}
+
+.logo {
+  font-size: 2rem;  
+}
+.l-heading {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+.btn {
+  display: inline-block;
+  color: #A93226;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: #A93226 2px solid;
+}
+.btn:hover {
+  background: #A93226;
+  color: #fff;
+}
+
+/* Navbar */
+#navbar {
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+#navbar .nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+
+}
+#navbar .nav ul {
+  display: flex;
+}
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+#navbar ul li a:hover {
+  color: #A93226;
+}
+
+/* Showcase */
+.content::before {
+  content: '';
+  background: url(./img/fahim.jpg)no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: -1;
+}
+#showcase {
+  margin-top: 200px;
+  margin-left: 300px;
+}
+
+#showcase .l-heading {
+  transform: translateX(-2000px);
+  animation: lead 1s 0.5s forwards ease-in-out;
+}
+@keyframes lead {
+  to {
+    transform: translateX(0);
+  }
+}
