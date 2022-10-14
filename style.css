@@ -3,23 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-li {
-  list-style: none;
-}
 a {
   text-decoration: none;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
   background: black;
+  line-height: 1.5;
+  color: #fff;
 }
 
 /* Utility Classes */
-.nav {
+.container {
   max-width: 1400px;
+  padding: 0 100px;
   margin: 0 auto;
 }
 .text-primary {
@@ -45,21 +43,39 @@ body {
   background: #A93226;
   color: #fff;
 }
-
+.btn-red {
+  background: #A93226;
+  color: #fff;
+  border-radius: 5px;
+}
+.btn-red:hover {
+  opacity: 0.8;
+}
+.m-heading {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+.a-heading {
+  font-size: 2.5rem;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
 /* Navbar */
 #navbar {
-  color: #fff;
-  position: sticky;
-  top: 0;
-}
-#navbar .nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
 
 }
-#navbar .nav ul {
+#navbar ul {
+  list-style: none;
   display: flex;
 }
 #navbar ul li a {
@@ -71,29 +87,116 @@ body {
   color: #A93226;
 }
 
+
 /* Showcase */
+#showcase {
+  margin-left: 20rem;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 100vh;
+  align-items: center;
+}
 .content::before {
   content: '';
   background: url(./img/fahim.jpg)no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
+  right: 0;
+  bottom: -190px;
+  opacity: 0.5;
   z-index: -1;
 }
-#showcase {
-  margin-top: 200px;
-  margin-left: 300px;
-}
-
 #showcase .l-heading {
   transform: translateX(-2000px);
-  animation: lead 1s 0.5s forwards ease-in-out;
+  animation: heading 1s 0.5s forwards ease-in-out;
 }
-@keyframes lead {
+@keyframes heading {
   to {
     transform: translateX(0);
   }
+}
+
+/* Boxes */
+#achievement {
+  padding-bottom: 4rem;
+  background: #fff;
+  color: black;
+}
+.items {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  margin: 0 3rem;
+}
+.items .box {
+
+  padding: 2rem 4rem;
+
+}
+.items .box i {
+  margin-bottom: 0.5rem;
+}
+.box {
+  box-shadow: inset -1px -1px 10px 1px black;
+}
+
+/* Profile */
+#profile {
+  background: #fff;
+  color: #444;
+}
+.testimonials {
+  padding: 4rem;
+  display: flex;
+
+}
+.testimonials img {
+  height: 300px;
+  margin-right: 4rem;
+  box-shadow: 5px 5px 5px #ccc;
+  border-radius: 10px;
+} 
+
+.testimonials ul li {
+  line-height: 1.9;
+  font-weight: bold;
+}
+
+/* Form */
+#form .contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: baseline;
+ padding: 5rem 0;
+}
+.c-heading {
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 2rem;
+}
+.contact-text ul li {
+  list-style: none;
+  padding-bottom: 0.5rem;
+}
+.contact-text ul li i {
+  padding-right: 0.5rem;
+}
+.form-group input,textarea {
+  display: block;
+  width: 80%;
+  padding: 0.58rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+/* Footer */
+#footer p {
+  text-align: center;
+  padding: 1rem 0;
+  background: #A93226;
+  color: #fff;
 }
