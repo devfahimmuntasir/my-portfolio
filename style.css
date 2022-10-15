@@ -34,10 +34,11 @@ body {
 }
 .btn {
   display: inline-block;
-  color: #A93226;
+  color: #fff;
   text-transform: uppercase;
   padding: 1rem 2rem;
   border: #A93226 2px solid;
+  transition: all 1s ease-in-out;
 }
 .btn:hover {
   background: #A93226;
@@ -47,6 +48,7 @@ body {
   background: #A93226;
   color: #fff;
   border-radius: 5px;
+  transition: all 1s ease-in-out;
 }
 .btn-red:hover {
   opacity: 0.8;
